@@ -4,3 +4,33 @@
 body, html {
     font-family: "Tahoma", sans-serif;
 }
+
+#title {
+    margin-top: 16px;
+    margin-bottom: 0;
+}
+
+#sub_title {
+    margin: 0;
+    margin-bottom: 16px;
+}
+
+#logo {
+    width: 75px;
+    margin-top: 4px;
+    margin-left: 15px;
+}
+
+
+
+/*#title_text {
+    padding-right: 100px;
+}*/
+
+
+
+
+
+.w3-navbar {
+    background-color: rgba(200,200,200,0.3);
+}
