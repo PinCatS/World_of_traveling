@@ -1,23 +1,47 @@
 body, html {
     font-family: "Tahoma", sans-serif;
+    font-size: 16px;
+}
+
+body {
+    width: 800px;
 }
 
 #title {
-    margin-top: 16px;
-    margin-bottom: 0;
+    width: 100%;
+    margin-top: 0px; /* 16 */
+    padding-bottom: 5%;
+    font-size: 2rem;
 }
 
 #sub_title {
+    width: 100%;
     margin: 0;
-    margin-bottom: 16px;
+    padding-top: 5%;
 }
 
 #logo {
-    width: 75px;
+    width: 100%;
     margin-top: 4px;
     margin-left: 15px;
+    opacity: 1;
 }
 
 .w3-navbar {
     background-color: rgba(200,200,200,0.3);
+}
+
+#title_text {
+    background-image: url("images/images/top_bar_logo_1@1x.png");
+}
+
+header {
+    width: 600px;
+}
+
+#logo_text {
+    width: 90%;
+    height: 30%;
+    margin-top: 5%;
+    background-color: rgba(255,255,255,0.4);
 }
