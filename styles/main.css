@@ -4,53 +4,156 @@ body, html {
 }
 
 .wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+    /*border: 1px solid green;*/
+}
+
+.header {
+    position: absolute;
     width: 800px;
-}
-
-#title {
-    width: 100%;
-    margin-top: 0px; /* 16 */
-    padding-bottom: 5%;
-    font-size: 2rem;
-}
-
-#sub_title {
-    width: 100%;
-    margin: 0;
-    padding-top: 5%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    
+    text-align: center;
+    
+    /*border: 1px solid red;*/
 }
 
 #logo {
-    width: 100%;
-    margin-top: 4px;
-    margin-left: 15px;
-    opacity: 1;
+    width: 500px; 
+    bottom: 0;
+}
+
+#logo_wheel {
+    position: absolute;
+    width: 90px;
+    top: 59px;
+    left: 590px;
+    z-index: -1;
+    
+    -webkit-animation-name: wheel_rotation; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 16s;         /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+    animation-name: wheel_rotation;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes wheel_rotation {
+    from {-webkit-transform: rotate(0deg);}
+    to {-webkit-transform: rotate(360deg);}
+}
+
+/* Standard syntax */
+@keyframes wheel_rotation {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+#logo_text {
+    position: absolute;
+    top: 55px;
+    left: 120px;
+    font-size: 20px;
+    background-color: rgba(255,255,255,0.4);
+}
+
+footer {
+    position: absolute;
+    width: 800px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    
+    text-align: center;
+    color: grey;
+    
+    /*border: 1px solid blue;*/
 }
 
 .w3-navbar {
     background-color: rgba(200,200,200,0.3);
 }
 
-#title_text {
-    background-image: url("images/images/top_bar_logo_1@1x.png");
-}
-
-header {
-    width: 600px;
-}
-
-#logo_text {
-    width: 90%;
-    height: 30%;
-    margin-top: 5%;
-    background-color: rgba(255,255,255,0.4);
-}
-
-footer {
+/* Todo: still need more to study */
+.search-form {
     position: absolute;
-    width: 100%;
-    bottom: 0;
+    right: 5px;
+    bottom: 7px;
+    transform: translate(-10%);
+}
+
+.search-box input[type="text"] {
+    border: none;
+    background: none;
+    z-index: 1;
+    width: 25px;
+    height: 17px;
+
+    transition: all .25s ease-in .25s;
+    color: transparent;
+    font-size: .75rem;
+    line-height: 25px;
+}
+.search-box input[type="text"]:hover {
+    cursor: pointer;
+}
+.search-box input[type="text"]:hover:focus {
+    cursor: text;
+}
+.search-box input[type="text"]:hover + span {
+    background: rgba(255, 255, 255, 0.2);
+}
+.search-box input[type="text"]:focus {
+    width: 150px;
+    padding: 0 15px;
+    outline: none;
+    color: black;
+    background: none;
+
+}
+.search-box input[type="text"]:focus + span {
+    width: 150px;
+    height: 20px;
+    border: none;
+    background: white;
+}
+.search-box input[type="text"]:focus + span::before {
+    width: 2px;
+    opacity: 0;
+    transition: all .25s ease-in;
+}
+.search-box input[type="text"] + span {
+    z-index: -1;
+    position: absolute;
+    border: 2px solid #948C8C;
+    top: 0;
     left: 0;
-    text-align: center;
-    color: grey;
+    width: 10px;
+    height: 10px;
+    transition: all .25s ease-in .25s;
+    border-radius: 5px;
+}
+.search-box input[type="text"] + span::before {
+    transition: all .25s ease-in .5s;
+    transform-origin: left top;
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 4px;
+    border-radius: 5px;
+    background: #948C8C;
+    transform: rotate(45deg) translate(26px, -2px);
+    top: -9px;
+    left: -9px;
 }
